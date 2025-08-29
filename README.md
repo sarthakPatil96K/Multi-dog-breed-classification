@@ -159,15 +159,5 @@ Pillow
 
 ---
 
-## 📝 License
 
-This project is open source and available under the [MIT License](LICENSE).
-
----
-
-## 🤝 Contributing
-
-Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/your-username/multi-dog-breed-classification/issues).
-
----
  
