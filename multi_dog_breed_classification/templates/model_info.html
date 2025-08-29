@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+{% block title %}Model Info — DogBreedAI{% endblock %}
+{% block content %}
+<h2 class="text-2xl font-semibold mb-6">Model Information</h2>
+<p class="text-lg mb-4">Architecture: <strong>MobileNetV2</strong></p>
+<div class="grid md:grid-cols-2 gap-6">
+  <div>
+    <h5 class="font-semibold mb-2">Performance</h5>
+    <ul class="list-disc list-inside text-gray-700">
+      <li>Top-1 accuracy: 86.0%</li>
+      <li>Top-5 accuracy: 96.2%</li>
+      <li>Precision / Recall: 0.88 / 0.87</li>
+    </ul>
+  </div>
+  <div>
+    <h5 class="font-semibold mb-2">Notes</h5>
+    <p class="text-sm text-gray-600">
+      Trained on: Kaggle Dog Breed Identification Dataset (Stanford Dogs subset) — number of classes: 120
+    </p>
+    <p class="text-sm text-gray-600">Training image count: 10,222</p>
+    <p class="text-sm text-gray-600">Preprocessing: Resized to 224x224, normalization, random horizontal flip augmentation</p>
+    <p class="text-xs text-gray-500 mt-2">
+      The competition is built on Stanford Dogs Dataset, credit to Aditya Khosla, Nityananda Jayadevaprakash, Bangpeng Yao, and Fei-Fei Li.
+    </p>
+  </div>
+</div>
+{% endblock %}
