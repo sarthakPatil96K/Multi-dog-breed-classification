@@ -2,16 +2,34 @@
 
 This project focuses on building a deep learning model to classify images of dogs into **120 different breeds** using the [Kaggle Dog Breed Identification Dataset](https://www.kaggle.com/competitions/dog-breed-identification). The model leverages **Transfer Learning** using **MobileNetV2**, which is lightweight and optimized for mobile and embedded vision applications.
 
+The project includes a **Django web application** that allows users to upload dog images and get breed predictions in real-time.
+
 ---
 
-## 📂 Dataset
+## 📂 Project Structure
 
-- The dataset contains high-quality images of dogs classified into **120 unique breeds** including:
-  affenpinscher, afghan_hound, african_hunting_dog, airedale,
-  american_staffordshire_terrier, appenzeller, australian_terrier, ...
-
-- Total classes: **120**
-- Source: Kaggle's Dog Breed Identification Competition
+```
+multi-dog-breed-classification/
+├── mult_dog_breed_classification/     # Django project root
+│   ├── dog_classifier/                # Main Django app
+│   ├── media/                         # Uploaded media files
+│   ├── static/                        # Static files (CSS, JS, images)
+│   │   ├── images/
+│   │   ├── site.css
+│   │   └── style.css
+│   ├── templates/                     # HTML templates
+│   │   ├── about.html
+│   │   ├── base.html
+│   │   ├── gallery.html
+│   │   ├── index.html
+│   │   └── model_info.html
+│   ├── theme/                         # Django theme files
+│   ├── db.sqlite3                     # SQLite database
+│   └── manage.py                      # Django management script
+├── venv/                              # Virtual environment
+├── init.txt
+└── README.md
+```
 
 ---
 
@@ -38,6 +56,58 @@ This project focuses on building a deep learning model to classify images of dog
 
 ---
 
+## 🌐 Django Web Application
+
+### Features:
+- **Image Upload**: Users can upload dog images through a web interface
+- **Real-time Prediction**: Instant breed classification results
+- **Gallery View**: Browse previously classified images
+- **Model Information**: Learn about the underlying ML model
+- **Responsive Design**: Works on desktop and mobile devices
+
+### Pages:
+- **Home** (`index.html`): Main page with image upload functionality
+- **Gallery** (`gallery.html`): Display of classified images
+- **About** (`about.html`): Project information and details
+- **Model Info** (`model_info.html`): Technical details about the ML model
+
+---
+
+## 🚀 Installation & Setup
+
+1. **Clone the repository**:
+   ```bash
+   git clone <repository-url>
+   cd multi-dog-breed-classification
+   ```
+
+2. **Set up virtual environment**:
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+3. **Install dependencies**:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+4. **Apply migrations**:
+   ```bash
+   cd mult_dog_breed_classification
+   python manage.py migrate
+   ```
+
+5. **Run the development server**:
+   ```bash
+   python manage.py runserver
+   ```
+
+6. **Access the application**:
+   Open your browser and go to `http://127.0.0.1:8000/`
+
+---
+
 ## 📊 Evaluation Metrics
 
 - **Accuracy**
@@ -45,14 +115,6 @@ This project focuses on building a deep learning model to classify images of dog
 - **Loss Curve**
 - **Confusion Matrix (optional)**
 - **Breed-wise prediction probability plots**
-
----
-
-## 📈 Results
-
-- Achieved satisfactory training and validation accuracy
-- Model generalizes well across various dog breeds
-- Confident breed predictions visualized using bar plots
 
 ---
 
@@ -73,20 +135,44 @@ This project focuses on building a deep learning model to classify images of dog
 
 ---
 
-## 🚀 Future Work
+## 🔮 Future Work
 
 - Optimize model using pruning or quantization
 - Convert to TensorFlow Lite for mobile deployment
-- Add web/streamlit interface for user uploads
+- Add user authentication and image history
 - Handle breed mixes and unknown breeds with thresholding
+- Deploy to cloud platform (AWS/Heroku)
 
 ---
 
 ## 🛠️ Requirements
 
 ```bash
+Django>=4.0
 tensorflow>=2.9
 matplotlib
 numpy
 pandas
 scikit-learn
+Pillow
+```
+
+---
+
+## 📝 License
+
+This project is open source and available under the [MIT License](LICENSE).
+
+---
+
+## 🤝 Contributing
+
+Contributions, issues, and feature requests are welcome! Feel free to check [issues page](https://github.com/your-username/multi-dog-breed-classification/issues).
+
+---
+
+## 📧 Contact
+
+Your Name - [your.email@example.com](mailto:your.email@example.com)
+
+Project Link: [https://github.com/your-username/multi-dog-breed-classification](https://github.com/your-username/multi-dog-breed-classification)gi
